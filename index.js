@@ -9,7 +9,7 @@ module.exports = function (file) {
     function() {
         var compiled = "module.exports = '";
 
-        compiled += buffer;
+        compiled += buffer.replace(/\r?\n|\r/g, '\\\\n');
         compiled += "';";
 
         this.queue(compiled);
