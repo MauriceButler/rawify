@@ -1,0 +1,28 @@
+{
+  "name": "rawify",
+  "version": "0.0.1",
+  "description": "Browserify transform to return the raw file contents if a file with extention is required",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MauriceButler/rawify.git"
+  },
+  "keywords": [
+    "raw",
+    "text",
+    "browserify",
+    "transform"
+  ],
+  "author": "maurice butler <maurice.butler@gmail.com>",
+  "license": "MIT",
+  "devDependencies" : {
+    "tape" : "1.1.x",
+    "mockery" : "1.4.x"
+  },
+  "dependencies" : {
+      "through" : "2.3.x"
+  }
+}
