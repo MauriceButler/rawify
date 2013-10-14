@@ -1,6 +1,6 @@
 {
   "name": "rawify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Browserify transform to return the raw file contents if a file with extention is required",
   "main": "index.js",
   "scripts": {
