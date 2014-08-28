@@ -1,9 +1,9 @@
 var through = require('through');
 
-module.exports = function (file) {
+module.exports = function(fileName) {
     var buffer = "";
 
-    if (!/\..*$/i.test(fileName)) {
+    if (!/\.(?=.*)(?!(?:js$)|(?:json$)|(?:node$)).*$/i.test(fileName)) {
         return through();
     }
 
@@ -11,9 +11,18 @@ module.exports = function (file) {
         buffer += chunk.toString();
     },
     function() {
-        var compiled = "module.exports = '";
+
+        // If the buffer already has an exports,
+        // it's probably already been transformed by something else.
+        if(buffer.match(/module\.exports/)){
+            this.queue(buffer);
+            this.queue(null);
+            return;
+        }
+
+        var compiled = "module.exports = ";
         compiled += JSON.stringify(buffer);
-        compiled += "';";
+        compiled += ";";
 
         this.queue(compiled);
         this.queue(null);
