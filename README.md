@@ -1,1 +1,15 @@
-Browserify transform to return the raw file contents if a file with extention is required
+# Rawify
+
+require any file as a string.
+
+## Usage
+
+    npm i rawify
+
+Then, require stuff:
+
+    // Plaintext
+    var anythingText = require('anything.txt');
+
+    // Css
+    var css = require('styles.css');
