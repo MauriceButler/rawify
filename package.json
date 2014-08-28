@@ -1,6 +1,6 @@
 {
   "name": "rawify",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Browserify transform to return the raw file contents if a file with extention is required",
   "main": "index.js",
   "scripts": {
@@ -18,10 +18,10 @@
   ],
   "author": "maurice butler <maurice.butler@gmail.com>",
   "license": "MIT",
-  "devDependencies" : {
-    "tape" : "1.1.x"
+  "devDependencies": {
+    "tape": "1.1.x"
   },
-  "dependencies" : {
-      "through" : "2.3.x"
+  "dependencies": {
+    "through": "2.3.x"
   }
 }
